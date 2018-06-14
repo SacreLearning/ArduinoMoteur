@@ -12,39 +12,40 @@
   int cD    = -1;
   int cG    = -1;
 
-const int SPEED1 = -100;
-const int SPEED2 = -75;
-const int SPEEDDefault = -100;
-const int SPEED3 = -70;
-const int SPEED4 = -25;
+const int SPEED1 = 25;
+const int SPEED2 = 50;
+const int SPEEDDefault = -70;
+
+
 
 int status = 0;
 
 void tournerDroite()    {
-        Motor.speed(MOTOR1, SPEEDDefault );
-        Motor.speed(MOTOR2, SPEED3 );
+        Motor.speed(MOTOR1, -70 );
+        Motor.speed(MOTOR2, 25 );
         status = 0;
 }
 
 void tournerGauche()  {
-        Motor.speed(MOTOR1, SPEED3 );
-        Motor.speed(MOTOR2, SPEEDDefault );
+        Motor.speed(MOTOR1, 25 );
+        Motor.speed(MOTOR2, -70 );
         status = 1;
 }
 
 void corrigerDroite() {
-        Motor.speed(MOTOR1, SPEEDDefault );
-        Motor.speed(MOTOR2, SPEED2 );
+
+        Motor.speed(MOTOR1, -70 );
+        Motor.speed(MOTOR2, 70 );
 }
 
 void corrigerGauche() {
-        Motor.speed(MOTOR1, SPEED2 );
-        Motor.speed(MOTOR2, SPEEDDefault );
+        Motor.speed(MOTOR1, 70 );
+        Motor.speed(MOTOR2, -70 );
 }
 
 void enAvant()   {
-        Motor.speed(MOTOR1, SPEEDDefault );
-        Motor.speed(MOTOR2, SPEEDDefault );
+        Motor.speed(MOTOR1, -70 );
+        Motor.speed(MOTOR2, -70 );
         status = 2;
 }
 
@@ -97,5 +98,3 @@ int getCD() {
 int getCG() {
   return cG;
 }
-
-
