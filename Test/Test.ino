@@ -88,14 +88,14 @@ void loop() {
           enAvant();
           refresh();
             if (IsThereALeftRoad() == false) {
-              randNum2 = 0;
+              randNum1 = 0;
             }
         }
         while(randNum1 == 2) {
           tournerGauche();
           refresh();
             if (IsThereALeftRoad() == false) {
-              randNum2 = 0;
+              randNum1 = 0;
             }  
         }
       }
@@ -107,7 +107,8 @@ void loop() {
       Serial.println("Tournant Multiple");
       while(randNum1 == 1) {
         tournerDroite();
-
+        refresh();
+        
         // VERIFICATION ROUTE FACE
         while(IsThereAFrontRoadWhenUTurnRight() == true) {
           randNum2 = randomizer(2);
