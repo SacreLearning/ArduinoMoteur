@@ -6,7 +6,7 @@
   int captorDroite;
 
 // Sortie de route droite
-bool RightOut(){
+bool rightOut(){
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -18,7 +18,7 @@ bool RightOut(){
 }
 
 // Sortie de route gauche
-bool LeftOut() {
+bool leftOut() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -30,7 +30,7 @@ bool LeftOut() {
 }
 
 // Route à droite
-bool IsThereARightRoad() {
+bool isThereARightRoad() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -42,7 +42,7 @@ bool IsThereARightRoad() {
 }
 
 // Route à gauche 
-bool IsThereALeftRoad() {
+bool isThereALeftRoad() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -54,7 +54,7 @@ bool IsThereALeftRoad() {
 }
 
 // Routes à gauche et à droite
-bool AreThereLeftAndRightRoad() {
+bool areThereLeftAndRightRoad() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -66,7 +66,7 @@ bool AreThereLeftAndRightRoad() {
 }
 
 // Route en face (lors d'un tournant droite)
-bool IsThereAFrontRoadWhenUTurnRight() {
+bool isThereAFrontRoadWhenUTurnRight() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();
@@ -78,7 +78,7 @@ bool IsThereAFrontRoadWhenUTurnRight() {
 }
 
 // Route en face (lors d'un tournant gauche)
-bool IsThereAFrontRoadWhenUTurnLeft() {
+bool isThereAFrontRoadWhenUTurnLeft() {
   captorDroiteEx = getCDE();
   captorGaucheEx = getCGE();
   captorDroite = getCD();

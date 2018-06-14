@@ -1,22 +1,22 @@
 #include <Grove_I2C_Motor_Driver.h>
 
 // Sortie de route droite
-bool RightOut();
+bool rightOut();
 
 // Sortie de route gauche
-bool LeftOut();
+bool leftOut();
 
 // Route à droite
-bool IsThereARightRoad();
+bool isThereARightRoad();
 
 // Route à gauche 
-bool IsThereALeftRoad();
+bool isThereALeftRoad();
 
 // Route à gauche et à droite
-bool AreThereLeftAndRightRoad();
+bool areThereLeftAndRightRoad();
 
 // Route en face (lors d'un tournant droite)
-bool IsThereAFrontRoadWhenUTurnRight();
+bool IisThereAFrontRoadWhenUTurnRight();
 
 // Route en face (lors d'un tournant gauche)
-bool IsThereAFrontRoadWhenUTurnLeft();
+bool isThereAFrontRoadWhenUTurnLeft();

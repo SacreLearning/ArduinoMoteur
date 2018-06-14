@@ -36,39 +36,42 @@ void loop() {
   stop();
 
     // VERIFICATION SORTIE DE ROUTE DROITE
-    while(RightOut() == true) {
+    while(rightOut() == true) {
       corrigerDroite();
       Serial.println("corrigerDroite");
       refresh();
     }
 
     // VERIFICATION SORTIE DE ROUTE GAUCHE
-    while(LeftOut() == true)  {
+    while(leftOut() == true)  {
       corrigerGauche();
       Serial.println("corrigerGauche");
       refresh();
     }
 
     // VERIFICATION TOURNANT DROITE
-    while(IsThereARightRoad() == true) {
+    while(isThereARightRoad() == true) {
       tournerDroite();
       Serial.println("tournerDroite");
       refresh();
       
       // VERIFICATION ROUTE FACE
-      while(IsThereAFrontRoadWhenUTurnRight() == true) {
+      while(isThereAFrontRoadWhenUTurnRight() == true) {
+        Serial.println("Route en face");
         randNum1 == randomizer(2);
         while(randNum1 == 1) {
+          Serial.println("enAvant");
           enAvant();
           refresh();
-            if (IsThereARightRoad() == false) {
+            if (isThereARightRoad() == false) {
               randNum2 = 0;
             }
         }
         while(randNum1 == 2) {
+          Serial.println("tournerDroite");
           tournerDroite();
           refresh();
-            if (IsThereARightRoad() == false) {
+            if (isThereARightRoad() == false) {
               randNum2 = 0;
             }  
         }
@@ -76,25 +79,28 @@ void loop() {
     }
 
     // VERIFICATION TOURNANT GAUCHE
-    while(IsThereALeftRoad() == true) {
+    while(isThereALeftRoad() == true) {
       tournerGauche();
       Serial.println("tournerGauche");
       refresh();
       
       // VERIFICATION ROUTE FACE
-      while(IsThereAFrontRoadWhenUTurnLeft() == true) {
+      while(isThereAFrontRoadWhenUTurnLeft() == true) {
+        Serial.println("Route en face");
         randNum1 == randomizer(2);
         while(randNum1 == 1) {
+          Serial.println("enAvant");
           enAvant();
           refresh();
-            if (IsThereALeftRoad() == false) {
+            if (isThereALeftRoad() == false) {
               randNum1 = 0;
             }
         }
         while(randNum1 == 2) {
+          Serial.println("tournerGauche");
           tournerGauche();
           refresh();
-            if (IsThereALeftRoad() == false) {
+            if (isThereALeftRoad() == false) {
               randNum1 = 0;
             }  
         }
@@ -102,7 +108,7 @@ void loop() {
    }
 
    // VERIFICATION TOURNANT MULTIPLE
-    while(AreThereLeftAndRightRoad() == true) {
+    while(areThereLeftAndRightRoad() == true) {
       randNum1 = randomizer(2);
       Serial.println("Tournant Multiple");
       while(randNum1 == 1) {
@@ -110,12 +116,12 @@ void loop() {
         refresh();
         
         // VERIFICATION ROUTE FACE
-        while(IsThereAFrontRoadWhenUTurnRight() == true) {
+        while(isThereAFrontRoadWhenUTurnRight() == true) {
           randNum2 = randomizer(2);
           while(randNum2 == 1) {
             enAvant();
             refresh();
-            if (AreThereLeftAndRightRoad() == false) {
+            if (areThereLeftAndRightRoad() == false) {
               randNum2 = 0;
             }
           }
@@ -132,19 +138,19 @@ void loop() {
         refresh();
         
         // VERIFICATION ROUTE FACE
-        while(IsThereAFrontRoadWhenUTurnLeft() == true) {
+        while(isThereAFrontRoadWhenUTurnLeft() == true) {
           randNum2 = randomizer(2);
           while(randNum2 == 1) {
             enAvant();
             refresh();
-            if (AreThereLeftAndRightRoad() == false) {
+            if (areThereLeftAndRightRoad() == false) {
               randNum2 = 0;
             }
           }
           while(randNum2 == 2) {
             tournerGauche();
             refresh();
-            if (AreThereLeftAndRightRoad() == false) {
+            if (areThereLeftAndRightRoad() == false) {
               randNum2 = 0;
             }
           }
