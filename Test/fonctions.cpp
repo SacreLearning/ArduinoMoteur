@@ -14,34 +14,37 @@
 
 const int SPEED1 = -100;
 const int SPEED2 = -75;
+const int SPEEDDefault = 60;
 const int SPEED3 = -50;
 const int SPEED4 = -25;
 
 int status = 0;
 
 void tournerDroite()    {
-        Motor.speed(MOTOR1, 2 * (SPEED1) );
-        Motor.speed(MOTOR2, 1 * (SPEED1) );
+        Motor.speed(MOTOR1, SPEED1 );
+        Motor.speed(MOTOR2, SPEED3 );
         status = 0;
 }
 
 void tournerGauche()  {
-        Motor.speed(MOTOR1, 1 * (SPEED1) );
-        Motor.speed(MOTOR2, 2 * (SPEED1) );
+        Motor.speed(MOTOR1, SPEED3 );
+        Motor.speed(MOTOR2, SPEED1 );
         status = 1;
 }
 
 void corrigerDroite() {
-  
+        Motor.speed(MOTOR1, SPEED1 );
+        Motor.speed(MOTOR2, SPEED2 );
 }
 
 void corrigerGauche() {
-  
+        Motor.speed(MOTOR1, SPEED2 );
+        Motor.speed(MOTOR2, SPEED1 );
 }
 
 void enAvant()   {
-        Motor.speed(MOTOR1, 1 * (SPEED1) );
-        Motor.speed(MOTOR2, 1 * (SPEED1) );
+        Motor.speed(MOTOR1, SPEED1 );
+        Motor.speed(MOTOR2, SPEED1 );
         status = 2;
 }
 
