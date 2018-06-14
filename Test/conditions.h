@@ -2,9 +2,11 @@
 
 // Sortie de route droite
 bool rightOut();
+bool exRightOut();
 
 // Sortie de route gauche
 bool leftOut();
+bool exLeftOut();
 
 // Route à droite
 bool isThereARightRoad();

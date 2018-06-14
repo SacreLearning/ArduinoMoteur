@@ -88,4 +88,3 @@ bool isThereAFrontRoadWhenUTurnLeft() {
   }
   else return false;
 }
-
