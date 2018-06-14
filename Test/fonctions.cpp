@@ -1,5 +1,17 @@
 #include "fonctions.h"
 
+  //define pin
+  int captorDroiteExPin    = 5;
+  int captorDroitePin      = 6;
+  int captorGauchePin      = 7;
+  int captorGaucheExPin    = 8;
+
+  //define values of pin
+  int cDE     = -1;
+  int cGE   = -1;
+  int cD    = -1;
+  int cG    = -1;
+
 const int SPEED1 = -100;
 const int SPEED2 = -75;
 const int SPEED3 = -50;
@@ -40,6 +52,47 @@ void stop()   {
 }
 
 
-int randomizer(int input) {
-  return random(0,input);
+int randomizer(int input){
+    return random(0, input-1);
 }
+
+void refresh(){
+  cDE = digitalRead(captorDroiteExPin);
+  cGE = digitalRead(captorGaucheExPin);
+  cD = digitalRead(captorDroitePin);
+  cG = digitalRead(captorGauchePin);
+}
+
+int getCDEPin() {
+  return captorDroiteExPin;
+}
+
+int getCGEPin() {
+  return captorGaucheExPin;
+}
+
+int getCDPin() {
+  return captorDroitePin;
+}
+
+int getCGPin() {
+  return captorGauchePin;
+}
+
+int getCDE() {
+  return cDE;
+}
+
+int getCGE() {
+  return cGE;
+}
+
+int getCD() {
+  return cD;
+}
+
+int getCG() {
+  return cG;
+}
+
+

@@ -21,5 +21,16 @@ void stop();
 // Fonction d'aléatoire
 int randomizer(int input); 
 
+void refresh();
+
+// Getters
+int getCDEPin();
+int getCGEPin();
+int getCDPin();
+int getCGPin();
+int getCDE();
+int getCGE();
+int getCD();
+int getCG();
 
 

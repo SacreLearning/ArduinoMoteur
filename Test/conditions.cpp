@@ -1,5 +1,16 @@
+
+#include "fonctions.h"
+  int captorDroiteEx;
+  int captorGaucheEx;
+  int captorGauche;
+  int captorDroite;
+
 // Sortie de route droite
-bool RightOut(int captorDroiteEx, int captorGaucheEx, int captorDroite, int captorGauche){
+bool RightOut(){
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
   if (captorDroite == 1 && captorDroiteEx == 0) {
     return true;
   }
@@ -7,7 +18,11 @@ bool RightOut(int captorDroiteEx, int captorGaucheEx, int captorDroite, int capt
 }
 
 // Sortie de route gauche
-bool LeftOut(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool LeftOut() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
     if (captorGauche == 1 && captorGaucheEx == 0) {
     return true;
   }
@@ -15,7 +30,11 @@ bool LeftOut(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGa
 }
 
 // Route à droite
-bool IsThereARightRoad(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool IsThereARightRoad() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
   if(captorDroite == 1 && captorDroiteEx == 1 && captorGauche == 0 && captorGaucheEx == 0) {
   return true;
   }
@@ -23,7 +42,11 @@ bool IsThereARightRoad(int captorDroiteEx,int captorGaucheEx,int captorDroite,in
 }
 
 // Route à gauche 
-bool IsThereALeftRoad(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool IsThereALeftRoad() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
     if(captorGauche == 1 && captorGaucheEx == 1 && captorDroite == 0 && captorDroiteEx == 0) {
   return true;
   }
@@ -31,7 +54,11 @@ bool IsThereALeftRoad(int captorDroiteEx,int captorGaucheEx,int captorDroite,int
 }
 
 // Routes à gauche et à droite
-bool AreThereLeftAndRightRoad(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool AreThereLeftAndRightRoad() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
   if(captorDroite == 1 && captorDroiteEx == 1 && captorGauche == 1 && captorGaucheEx == 1) {
     return true;
   }
@@ -39,7 +66,11 @@ bool AreThereLeftAndRightRoad(int captorDroiteEx,int captorGaucheEx,int captorDr
 }
 
 // Route en face (lors d'un tournant droite)
-bool IsThereAFrontRoadWhenUTurnRight(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool IsThereAFrontRoadWhenUTurnRight() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
   if(captorGauche == 1) {
     return true;
   }
@@ -47,7 +78,11 @@ bool IsThereAFrontRoadWhenUTurnRight(int captorDroiteEx,int captorGaucheEx,int c
 }
 
 // Route en face (lors d'un tournant gauche)
-bool IsThereAFrontRoadWhenUTurnLeft(int captorDroiteEx,int captorGaucheEx,int captorDroite,int captorGauche) {
+bool IsThereAFrontRoadWhenUTurnLeft() {
+  captorDroiteEx = getCDE();
+  captorGaucheEx = getCGE();
+  captorDroite = getCD();
+  captorGauche = getCG();
   if(captorDroite == 1) {
     return true;
   }
