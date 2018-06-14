@@ -16,7 +16,7 @@ bool isThereALeftRoad();
 bool areThereLeftAndRightRoad();
 
 // Route en face (lors d'un tournant droite)
-bool IisThereAFrontRoadWhenUTurnRight();
+bool isThereAFrontRoadWhenUTurnRight();
 
 // Route en face (lors d'un tournant gauche)
 bool isThereAFrontRoadWhenUTurnLeft();

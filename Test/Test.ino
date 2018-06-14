@@ -30,11 +30,11 @@ void setup() {
 }
 
 void loop() {
-  
+    
+    enAvant();  
     refresh();
-  
-  stop();
 
+     //stop();
     // VERIFICATION SORTIE DE ROUTE DROITE
     while(rightOut() == true) {
       corrigerDroite();
@@ -59,6 +59,7 @@ void loop() {
       while(isThereAFrontRoadWhenUTurnRight() == true) {
         Serial.println("Route en face");
         randNum1 == randomizer(2);
+        // PRISE ROUTE FACE
         while(randNum1 == 1) {
           Serial.println("enAvant");
           enAvant();
@@ -67,6 +68,7 @@ void loop() {
               randNum2 = 0;
             }
         }
+        // PRISE ROUTE A DROITE 
         while(randNum1 == 2) {
           Serial.println("tournerDroite");
           tournerDroite();
@@ -88,6 +90,7 @@ void loop() {
       while(isThereAFrontRoadWhenUTurnLeft() == true) {
         Serial.println("Route en face");
         randNum1 == randomizer(2);
+        // PRISE ROUTE FACE
         while(randNum1 == 1) {
           Serial.println("enAvant");
           enAvant();
@@ -96,6 +99,7 @@ void loop() {
               randNum1 = 0;
             }
         }
+        // PRISE ROUTE GAUCHE
         while(randNum1 == 2) {
           Serial.println("tournerGauche");
           tournerGauche();
@@ -106,7 +110,7 @@ void loop() {
         }
       }
    }
-
+/*
    // VERIFICATION TOURNANT MULTIPLE
     while(areThereLeftAndRightRoad() == true) {
       randNum1 = randomizer(2);
@@ -157,6 +161,6 @@ void loop() {
         }
       }
     }
-  }
+  }*/
 }
     
