@@ -25,12 +25,13 @@ void tournerDroite()  {
   while(getCD() == 1 && getCDE() == 1){
     enAvant();
     refresh();
+    delay(50);
   }
-  do{
+  while(getCDE() == 0) {
       Motor.speed(MOTOR1, SPEEDDefault);
       Motor.speed(MOTOR2, SPEED3 );
     refresh();
-  }while(getCDE() == 0);
+  }
 
   do{
       Motor.speed(MOTOR1, SPEEDDefault);
@@ -49,12 +50,13 @@ void tournerGauche()  {
   while(getCG()== 1 && getCGE() == 1){
     enAvant();
     refresh();
+    delay(50);
   }
-  do{
+  while(getCGE() == 0){
       Motor.speed(MOTOR1, SPEED3);
       Motor.speed(MOTOR2, SPEEDDefault );
     refresh();
-  }while(getCGE() == 0);
+  }
 
   do{
       Motor.speed(MOTOR1, SPEED3);
@@ -71,18 +73,20 @@ void tournerGauche()  {
 
 void corrigerDroite() {
 
-        Motor.speed(MOTOR1, -70 );
-        Motor.speed(MOTOR2, 70 );
+        Motor.speed(MOTOR1, SPEEDDefault );
+        Motor.speed(MOTOR2, SPEED3 );
+        delay(50);
 }
 
 void corrigerGauche() {
-        Motor.speed(MOTOR1, 70 );
-        Motor.speed(MOTOR2, -70 );
+        Motor.speed(MOTOR1, SPEED3 );
+        Motor.speed(MOTOR2, SPEEDDefault );
+        delay(50);
 }
 
 void enAvant()   {
-        Motor.speed(MOTOR1, -70 );
-        Motor.speed(MOTOR2, -70 );
+        Motor.speed(MOTOR1, SPEEDDefault);
+        Motor.speed(MOTOR2, SPEEDDefault );
         status = 2;
 }
 

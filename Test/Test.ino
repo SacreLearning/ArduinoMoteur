@@ -55,8 +55,24 @@ void loop() {
       tournerGauche();
     }
 
-/*   // VERIFICATION TOURNANT MULTIPLE
+       // VERIFICATION TOURNANT MULTIPLE
     while(areThereLeftAndRightRoad() == true) {
+      randNum1 = randomizer(2);
+      while(randNum1 == 0) {
+        tournerDroite();
+      }
+      while(randNum1 == 1) {
+        tournerGauche();
+      }
+    }
+    
+}
+    
+
+
+
+
+   /*while(areThereLeftAndRightRoad() == true) {
       randNum1 = randomizer(2);
       Serial.println("Tournant Multiple");
       while(randNum1 == 1) {
@@ -106,5 +122,3 @@ void loop() {
       }
     }
   }*/
-}
-    
