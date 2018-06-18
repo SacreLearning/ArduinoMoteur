@@ -6,6 +6,7 @@
 
 #include "fonctions.h"
 #include "conditions.h"
+#include "coord.h"
 
 #define i2c_address 0x0f
 
@@ -29,6 +30,8 @@ void setup() {
 
 void loop() {
     
+    distanceIntoCoord();
+    checkPos(position, "C")
     enAvant();  
     refresh();
 
