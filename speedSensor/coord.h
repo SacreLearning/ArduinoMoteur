@@ -42,6 +42,6 @@ class coord {
     int docount();
     int rotation();
     int direction();
-    void distance();
+    int distanceIntoCoord();
     void checkPos();
 }
