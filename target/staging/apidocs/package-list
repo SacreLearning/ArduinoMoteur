@@ -1,0 +1,12 @@
+controller
+controller.gamestate
+main
+model
+model.IA
+model.dao
+model.element
+model.element.motionless
+model.map
+model.save
+showboard
+view
